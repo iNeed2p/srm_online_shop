@@ -1,395 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-
+  <body>
     <section id="header">
-        <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
-        
-        <div>
-            <ul id="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li>
-                    <div class="dropdown">
-                        <button class="dropbtn">Shop</button>
-                        <div class="dropdown-content">
-                          <a href="shirts.html">T-shirt</a>
-                          <a href="shoes.html">Shoes</a>
-                          <a href="pants.html">Pants</a>
-                          <a href="bags.html">Bags</a>
-                        </div>
-                      </div>
-                      
-                </li>
-                <!-- <li><a href="blog.html">Blog</a></li> -->
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+      <a href="#"><img src="images/logo.png" class="logo" alt="" /></a>
 
-            </ul>
-        </div>
-
+      <div>
+        <ul id="navbar">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li>
+            <div class="dropdown">
+              <button class="dropbtn">Shop</button>
+              <div class="dropdown-content">
+                <a href="shirts.html">T-shirt</a>
+                <a href="shoes.html">Shoes</a>
+                <a href="pants.html">Pants</a>
+                <a href="bags.html">Bags</a>
+              </div>
+            </div>
+          </li>
+          <!-- <li><a href="blog.html">Blog</a></li> -->
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="cart-nav">
+            <button href="#">Cart <span id="cart-count">0</span></button>
+          </li>
+        </ul>
+      </div>
     </section>
-<section id="hero">
-    <h4>Trade-in-Offers</h4>
-    <h2>Super value deals</h2>
-    <h1>On all products</h1>
-    <p>Save more with coupons & up to 70% off!</p>
-    <button>Shop now</button>
-</section>
+    <section id="hero">
+      <h4>Trade-in-Offers</h4>
+      <h2>Super value deals</h2>
+      <h1>On all products</h1>
+      <p>Save more with coupons & up to 70% off!</p>
+      <button>Shop now</button>
+    </section>
 
-<section id ="feature" class="section-p1">
-    <div class="fe-box">
-        <img src="images/features/f1.png" alt="">
+    <section id="feature" class="section-p1">
+      <div class="fe-box">
+        <img src="images/features/f1.png" alt="" />
         <h6>Free Shipping</h6>
-    </div>
-    <div class="fe-box">
-        <img src="images/features/f2.png" alt="">
+      </div>
+      <div class="fe-box">
+        <img src="images/features/f2.png" alt="" />
         <h6>Online Order</h6>
-    </div>
-    <div class="fe-box">
-        <img src="images/features/f3.png" alt="">
+      </div>
+      <div class="fe-box">
+        <img src="images/features/f3.png" alt="" />
         <h6>Save Money</h6>
-    </div>
-    <div class="fe-box">
-        <img src="images/features/f4.png" alt="">
+      </div>
+      <div class="fe-box">
+        <img src="images/features/f4.png" alt="" />
         <h6>Promotions</h6>
-    </div>
-    <div class="fe-box">
-        <img src="images/features/f5.png" alt="">
+      </div>
+      <div class="fe-box">
+        <img src="images/features/f5.png" alt="" />
         <h6>Happy Sell</h6>
-    </div>
-    <div class="fe-box">
-        <img src="images/features/f6.png" alt="">
+      </div>
+      <div class="fe-box">
+        <img src="images/features/f6.png" alt="" />
         <h6>Support</h6>
-    </div>
+      </div>
+    </section>
 
+    <section id="product1" class="section-p1">
+      <h2>Featured Products</h2>
+      <p>
+        Welcome to SRM Online Shop Enjoy Discounts on Must-Have Styles for Your
+        Closet!"
+      </p>
+      <div class="pro-container">
+        <div class="pro view-details">
+          <img src="images/products/dunk low retro.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Dunk Low Retro 1</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱5,499</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/dunk 2.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Dunk Low Retro 2</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱5,499</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/dunk 3.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Dunk Low Retro 3</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱5,499</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/dunk 4.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Dunk Low Retro 4</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱5,499</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/Nike DNA.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Nike DNA</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱2,599</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/Nike Solo Swoosh.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Nike Solo Swoosh</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱2,599</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/Nike Sportswear.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Nike Sportswear</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱1,899</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/Swoosh Jacket.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Swoosh Jacket</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱2,799</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="banner" class="section-m1">
+      <h4>Discover Timeless Elegance</h4>
+      <h2>Up to <span>70% Off</span> - All Shoes & Jackets</h2>
+      <button class="normal">Explore More</button>
+    </section>
 
-</section>
-
-<section id="product1" class="section-p1">
-    <h2>Featured Products</h2>
-    <p>Welcome to SRM Online Shop Enjoy Discounts on Must-Have Styles for Your Closet!"</p>
-    <div class="pro-container">
-        <div class="pro">
-            <img src="images/products/dunk low retro.png" alt="">
-            <div class="des">
-                <span>Nike</spa>
-                <h5>Dunk Low Retro 1</h5>
-                <div class="star">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>    
-                <h4>₱5,499</h4>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-        <div class="pro">
-            <img src="images/products/dunk 2.png" alt="">
-            <div class="des">
-                <span>Nike</spa>
-                <h5>Dunk Low Retro 2</h5>
-                <div class="star">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>    
-                <h4>₱5,499</h4>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-        <div class="pro">
-            <img src="images/products/dunk 3.png" alt="">
-            <div class="des">
-                <span>Nike</spa>
-                <h5>Dunk Low Retro 3</h5>
-                <div class="star">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>    
-                <h4>₱5,499</h4>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-        <div class="pro">
-            <img src="images/products/dunk 4.png" alt="">
-            <div class="des">
-                <span>Nike</spa>
-                <h5>Dunk Low Retro 4</h5>
-                <div class="star">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>    
-                <h4>₱5,499</h4>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-        <div class="pro">
-            <img src="images/products/Nike DNA.png" alt="">
-            <div class="des">
-                <span>Nike</spa>
-                <h5>Nike DNA</h5>
-                <div class="star">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>    
-                <h4>₱2,599</h4>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-        <div class="pro">
-            <img src="images/products/Nike Solo Swoosh.png" alt="">
-            <div class="des">
-                <span>Nike</spa>
-                <h5>Nike Solo Swoosh</h5>
-                <div class="star">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>    
-                <h4>₱2,599</h4>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-        <div class="pro">
-            <img src="images/products/Nike Sportswear.png" alt="">
-            <div class="des">
-                <span>Nike</spa>
-                <h5>Nike Sportswear</h5>
-                <div class="star">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>    
-                <h4>₱1,899</h4>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-        <div class="pro">
-            <img src="images/products/Swoosh Jacket.png" alt="">
-            <div class="des">
-                <span>Nike</spa>
-                <h5>Swoosh Jacket</h5>
-                <div class="star">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>    
-                <h4>₱2,799</h4>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section id="banner" class="section-m1">
-    <h4>Discover Timeless Elegance</h4>
-    <h2>Up to <span>70% Off</span> - All Shoes & Jackets</h2>
-    <button class="normal">Explore More</button>
-
-</section>
-
-<section id="product1" class="section-p1">
-    <h2>New Arrivals</h2>
-    <p> Enjoy Discounts on Must-Have Styles for Your Closet!</p>
-    <div class="pro-container">
-        <div class="pro">
-         <img src="images/products/N1 Vormero 17.png" alt="">
-         <div class="des">
+    <section id="product1" class="section-p1">
+      <h2>New Arrivals</h2>
+      <p>Enjoy Discounts on Must-Have Styles for Your Closet!</p>
+      <div class="pro-container">
+        <div class="pro view-details">
+          <img src="images/products/N1 Vormero 17.png" alt="" />
+          <div class="des">
             <span>Nike</span>
             <h5>Nike Vormero</h5>
             <div class="star">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-            </div>    
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
             <h4>₱4,499</h4>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
         </div>
-    </div>
-    <div class="pro">
-        <img src="images/products/n2 journey-run-Q5kF8v.png" alt="">
-        <div class="des">
-           <span>Nike</span>
-           <h5>Nike Journey Run</h5>
-           <div class="star">
-               <i class="fa-solid fa-star"></i>
-               <i class="fa-solid fa-star"></i>
-               <i class="fa-solid fa-star"></i>
-               <i class="fa-solid fa-star"></i>
-               <i class="fa-solid fa-star"></i>
-           </div>    
-           <h4>₱5,499</h4>
-           <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-       </div>
-   </div>
-   <div class="pro">
-    <img src="images/products/n3 cortez-txt-shoes-HhM7W9.png" alt="">
-    <div class="des">
-       <span>Nike</span>
-       <h5>Nike Cortez</h5>
-       <div class="star">
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-       </div>    
-       <h4>₱6,899</h4>
-       <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-   </div>
-</div>
-<div class="pro">
-    <img src="images/products/n4 lebron-xxi-ep-basketball-shoes-BrtQSn.png" alt="">
-    <div class="des">
-       <span>Nike</span>
-       <h5>Lebron XXI</h5>
-       <div class="star">
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-       </div>    
-       <h4>₱8,999</h4>
-       <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-   </div>
-</div>
-<div class="pro">
-    <img src="images/products/n5 sb.png" alt="">
-    <div class="des">
-       <span>Nike</span>
-       <h5>Nike SB</h5>
-       <div class="star">
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-       </div>    
-       <h4>₱3,255</h4>
-       <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-   </div>
-</div>
-<div class="pro">
-    <img src="images/products/n6 club-short-sleeve.png" alt="">
-    <div class="des">
-       <span>Nike</span>
-       <h5>Nike Club Short Sleeve</h5>
-       <div class="star">
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-       </div>    
-       <h4>₱2,885</h4>
-       <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-   </div>
-</div>
-<div class="pro">
-    <img src="images/products/n7 brasilia-9-5-.png" alt="">
-    <div class="des">
-       <span>Nike</span>
-       <h5>Nike Brasilia</h5>
-       <div class="star">
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-       </div>    
-       <h4>₱4,695</h4>
-       <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-   </div>
-</div>
-<div class="pro">
-    <img src="images/products/n8 sportswear-max90-.png" alt="">
-    <div class="des">
-       <span>Nike</span>
-       <h5>Nike Sportswear Max90</h5>
-       <div class="star">
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-           <i class="fa-solid fa-star"></i>
-       </div>    
-       <h4>₱3,199</h4>
-       <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-   </div>
-</div>
-    
-</div>
+        <div class="pro view-details">
+          <img src="images/products/n2 journey-run-Q5kF8v.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Nike Journey Run</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱5,499</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/n3 cortez-txt-shoes-HhM7W9.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Nike Cortez</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱6,899</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img
+            src="images/products/n4 lebron-xxi-ep-basketball-shoes-BrtQSn.png"
+            alt=""
+          />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Lebron XXI</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱8,999</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/n5 sb.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Nike SB</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱3,255</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/n6 club-short-sleeve.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Nike Club Short Sleeve</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱2,885</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/n7 brasilia-9-5-.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Nike Brasilia</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱4,695</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+        <div class="pro view-details">
+          <img src="images/products/n8 sportswear-max90-.png" alt="" />
+          <div class="des">
+            <span>Nike</span>
+            <h5>Nike Sportswear Max90</h5>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>₱3,199</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-</section>
-
-<section id="sm-banner" class="section-p1">
-    <div class="banner-box">
+    <section id="sm-banner" class="section-p1">
+      <div class="banner-box">
         <h4>Huge Deals</h4>
         <h2>Buy 1 Get 1 Free</h2>
         <span>Get Your Wardrobe Essentials at Unbeatable Prices!</span>
         <button class="white">Learn More</button>
-    </div>
-    <div class="banner-box banner-box2">
+      </div>
+      <div class="banner-box banner-box2">
         <h4>T-Shirts/Windbreakers</h4>
         <h2>Upcomming Items</h2>
         <span>Elevate Your Style with our Signature Collection</span>
         <button class="white">Collection</button>
-    </div>
+      </div>
+    </section>
 
-</section>
-
-<section id="banner3">
-    <div class="banner-box">
-    <h2>Seasonal Sale</h2>
-    <h3>Timeless Fashion Favorites</h3>
-    </div>
-    <div class="banner-box banner-box2">
-     <h2>Jackets/Windbreakers</h2>
-     <h3>New Trendy Designs</h3>
-    </div>
-    <div class="banner-box banner-box3">
-     <h2>New Footwear Collection</h2>
-     <h3>Classic Pieces</h3>
-     </div>
-</section>
+    <section id="banner3">
+      <div class="banner-box">
+        <h2>Seasonal Sale</h2>
+        <h3>Timeless Fashion Favorites</h3>
+      </div>
+      <div class="banner-box banner-box2">
+        <h2>Jackets/Windbreakers</h2>
+        <h3>New Trendy Designs</h3>
+      </div>
+      <div class="banner-box banner-box3">
+        <h2>New Footwear Collection</h2>
+        <h3>Classic Pieces</h3>
+      </div>
+    </section>
 
     <script src="script.js"></script>
-</body>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Find all "view details" links
+        const viewDetailLinks = document.querySelectorAll('.view-details')
 
+        // Handle click event for each link
+        viewDetailLinks.forEach((link) => {
+          link.addEventListener('click', function (event) {
+            event.preventDefault()
 
+            // Get product details
+            const productContainer = event.target.closest('.pro')
+            const productId = productContainer.dataset.productId
+            const productName = productContainer.querySelector('h5').textContent
+            const productPrice =
+              productContainer.querySelector('h4').textContent
+            const productImage = productContainer.querySelector('img').src
+            const productRatings =
+              productContainer.querySelectorAll('.fa-star').length
 
+            // Store product details in sessionStorage
+            sessionStorage.setItem('productId', productId)
+            sessionStorage.setItem('productName', productName)
+            sessionStorage.setItem('productPrice', productPrice)
+            sessionStorage.setItem('productImage', productImage)
+            sessionStorage.setItem('productRatings', productRatings)
+
+            // Navigate to temporary HTML file
+            window.location.href = 'product_details_temp.html'
+          })
+        })
+      })
+
+      // Function to update the cart count indicator
+      function updateCartCount() {
+        const cartCount = document.getElementById('cart-count')
+        let cart = localStorage.getItem('cart')
+        cart = cart ? JSON.parse(cart) : []
+        cartCount.textContent = cart.length
+      }
+
+      // Call the function to update the cart count initially
+      updateCartCount()
+    </script>
+  </body>
 </html>

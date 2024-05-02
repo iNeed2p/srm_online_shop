@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="product_details.css" />
+  </head>
+  <body>
+    <h1>Product Details</h1>
+    <div id="product-details">
+      <!-- Display product details here -->
+      <img id="product-image" src="" alt="Product Image" />
+      <div class="des">
+        <!-- <span>Brand:</span> -->
+        <h5 id="product-name"></h5>
+        <div id="product-ratings" class="star"></div>
+        <h4 id="product-price"></h4>
+        <button id="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <script>
+      // Retrieve product details from sessionStorage
+      const productId = sessionStorage.getItem('productId')
+      const productName = sessionStorage.getItem('productName')
+      const productPrice = sessionStorage.getItem('productPrice')
+      const productImage = sessionStorage.getItem('productImage')
+      const productRatings = sessionStorage.getItem('productRatings')
+
+      // Display product details
+      const productDetailsContainer = document.getElementById('product-details')
+      if (
+        productId &&
+        productName &&
+        productPrice &&
+        productImage &&
+        productRatings
+      ) {
+        document.getElementById('product-image').src = productImage
+        document.getElementById('product-name').textContent = productName
+        document.getElementById('product-price').textContent = productPrice
+
+        // Add star ratings
+        const ratingsContainer = document.getElementById('product-ratings')
+        const ratings = parseInt(productRatings)
+        for (let i = 0; i < 5; i++) {
+          const star = document.createElement('i')
+          star.classList.add('fa-solid', 'fa-star')
+          if (i < ratings) {
+            star.style.color = 'gold'
+          } else {
+            star.style.color = 'gray'
+          }
+          ratingsContainer.appendChild(star)
+        }
+      } else {
+        productDetailsContainer.innerHTML = '<p>Product details not found.</p>'
+      }
+
+      // Clear temporary data from sessionStorage when leaving the page
+      window.addEventListener('beforeunload', function () {
+        sessionStorage.removeItem('productId')
+        sessionStorage.removeItem('productName')
+        sessionStorage.removeItem('productPrice')
+        sessionStorage.removeItem('productImage')
+        sessionStorage.removeItem('productRatings')
+      })
+
+      // Handle add to cart button click
+      document
+        .getElementById('add-to-cart')
+        .addEventListener('click', function () {
+          // Create or retrieve the cart from localStorage
+          let cart = localStorage.getItem('cart')
+          if (!cart) {
+            cart = []
+          } else {
+            cart = JSON.parse(cart)
+          }
+
+          // Add the current product to the cart
+          const product = {
+            id: productId,
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            ratings: productRatings,
+          }
+          cart.push(product)
+
+          // Update the cart in localStorage
+          localStorage.setItem('cart', JSON.stringify(cart))
+
+          // Notify the user that the product has been added to the cart
+          alert('Product added to cart!')
+        })
+    </script>
+  </body>
+</html>

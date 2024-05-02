@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 10px;
+  color: #222;
+
+}
+
+h2{
+  font-size: 47px;
+  line-height: 24px;
+  color: #222;
+
+}
+
+h4{
+  font-size: 20px;
+  color: #222;
+
+}
+
+h6{
+  font-weight: 500;
+  font-size: 24px;
+  
+}
+
+p {
+  font-size: 15px;
+  color: #465b52;
+  margin: 5px 0 10px 0;
+  
+  
+}
+
+/* Product details page styles */
+
+#product-details {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 1rem;
+  padding: 20px;
+}
+
+#product-details h1 {
+  font-size: 32px;
+  color: #088178;
+  margin-bottom: 10px;
+}
+
+#product-details p {
+  font-size: 16px;
+  color: #465b52;
+  margin-bottom: 8px;
+}
+
+#product-details img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#product-details .des {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: start;
+}
+
+#product-details .des span {
+  color: #606063;
+}
+
+#product-details .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 18px;
+}
+
+#product-details .des i {
+  font-size: 16px;
+  color: rgb(243, 181, 25);
+}
+
+#product-details .des h4 {
+  padding-top: 7px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #088178;
+}
+
+#product-details button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 30px;
+  color: #fff;
+  background-color: #088178;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  margin-top: 20px;
+}
+
+#product-details button:hover {
+  background-color: #06594d;
+}
+
+
