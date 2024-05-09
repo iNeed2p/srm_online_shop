@@ -1,67 +1,67 @@
 <div class="box form_container">
-    <!-- box Starts -->
+  <!-- box Starts -->
 
-    <div class="box_wrapper">
+  <div class="box_wrapper">
 
-      <div class="box-header">
-          <!-- box-header Starts -->
+    <div class="box-header">
+      <!-- box-header Starts -->
 
-          <h1>Login</h1>
+      <h1>Login</h1>
 
-          <p class="lead">Already our Customer</p>
+      <p class="lead">Already our Customer</p>
+
+    </div>
+    <!-- box-header ends -->
+
+    <form action="checkout.php" method="post">
+      <!--form Starts -->
+
+      <div class="form-group">
+        <!-- form-group Starts -->
+
+        <label>Email</label>
+
+        <input type="text" class="form-control" name="c_email" required>
 
       </div>
-      <!-- box-header ends -->
+      <!-- form-group ends -->
 
-      <form action="checkout.php" method="post">
-          <!--form Starts -->
+      <div class="form-group">
+        <!-- form-group Starts -->
 
-          <div class="form-group">
-              <!-- form-group Starts -->
+        <label>Password</label>
 
-              <label>Email</label>
-
-              <input type="text" class="form-control" name="c_email" required>
-
-          </div>
-          <!-- form-group ends -->
-
-          <div class="form-group">
-              <!-- form-group Starts -->
-
-              <label>Password</label>
-
-              <input type="password" class="form-control" name="c_pass" required>
-
-              
-            </div>
-            <!-- form-group ends -->
-            
-            <div class="text-center">
-                <!-- text-center Starts -->
-                <div class="group">
-                    <a href="customer_register.php">Don't have an account? Signup</a>
-                    <a href="forgot_pass.php"> Forgot Password </a>
-                </div>
-              <button name="login" value="Login" class="btn btn-primary">
-                  <i class="fa fa-sign-in"></i> Log in
-              </button>
-          </div>
-          <!-- text-center ends -->
+        <input type="password" class="form-control" name="c_pass" required>
 
 
-      </form>
-      <!--form ends -->
+      </div>
+      <!-- form-group ends -->
 
-      <center>
-          <!-- center Starts -->
+      <div class="text-center">
+        <!-- text-center Starts -->
+        <div class="group">
+          <a href="customer_register.php">Don't have an account? Signup</a>
+          <a href="forgot_pass.php"> Forgot Password </a>
+        </div>
+        <button name="login" value="Login" class="btn btn-primary">
+          <i class="fa fa-sign-in"></i> Log in
+        </button>
+      </div>
+      <!-- text-center ends -->
 
-          
+
+    </form>
+    <!--form ends -->
+
+    <center>
+      <!-- center Starts -->
 
 
-      </center>
-      <!-- center ends -->
-    </div>
+
+
+    </center>
+    <!-- center ends -->
+  </div>
 
 </div>
 <!-- box ends -->

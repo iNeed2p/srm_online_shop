@@ -20,5 +20,6 @@
   <link href="styles/pagination.css" rel="stylesheet">
   <link href="styles/payment.css" rel="stylesheet">
   <link href="styles/confirm.css" rel="stylesheet">
+  <link href="styles/forgot_pass.css" rel="stylesheet">
 
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
