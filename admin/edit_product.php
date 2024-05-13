@@ -56,9 +56,9 @@ $p_label = $row_edit['product_label'];
 
 $p_url = $row_edit['product_url'];
 
-$p_features = $row_edit['product_features'];
+// $p_features = $row_edit['product_features'];
 
-$p_video = $row_edit['product_video'];
+// $p_video = $row_edit['product_video'];
 
 }
 
@@ -396,80 +396,10 @@ echo "<option value='$cat_id'>$cat_title</option>";
             <div class="form-group">
               <!-- form-group Starts -->
 
-              <label class="col-md-3 control-label"> Product Tabs </label>
+              <label class="col-md-3 control-label"> Product Description </label>
 
               <div class="col-md-6">
-
-                <ul class="nav nav-tabs">
-                  <!-- nav nav-tabs Starts -->
-
-                  <li class="active">
-
-                    <a data-toggle="tab" href="#description"> Product Description </a>
-
-                  </li>
-
-                  <li>
-
-                    <a data-toggle="tab" href="#features"> Product Features </a>
-
-                  </li>
-
-                  <li>
-
-                    <a data-toggle="tab" href="#video"> Sounds And Videos </a>
-
-                  </li>
-
-                </ul><!-- nav nav-tabs ends -->
-
-                <div class="tab-content">
-                  <!-- tab-content Starts -->
-
-                  <div id="description" class="tab-pane fade in active">
-                    <!-- description tab-pane fade in active Starts -->
-
-                    <br>
-
-                    <textarea name="product_desc" class="form-control" rows="15" id="product_desc">
-
-<?php echo $p_desc; ?>
-
-</textarea>
-
-                  </div><!-- description tab-pane fade in active ends -->
-
-
-                  <div id="features" class="tab-pane fade in">
-                    <!-- features tab-pane fade in Starts -->
-
-                    <br>
-
-                    <textarea name="product_features" class="form-control" rows="15" id="product_features">
-
-<?php echo $p_features; ?>
-
-</textarea>
-
-                  </div><!-- features tab-pane fade in ends -->
-
-
-                  <div id="video" class="tab-pane fade in">
-                    <!-- video tab-pane fade in Starts -->
-
-                    <br>
-
-                    <textarea name="product_video" class="form-control" rows="15">
-
-<?php echo $p_video; ?>
-
-</textarea>
-
-                  </div><!-- video tab-pane fade in ends -->
-
-
-                </div><!-- tab-content ends -->
-
+                <textarea name="product_desc" class="form-control" rows="15" id="product_desc"><?php echo $p_desc; ?></textarea>
               </div>
 
             </div><!-- form-group ends -->
@@ -535,9 +465,9 @@ $product_label = $_POST['product_label'];
 
 $product_url = $_POST['product_url'];
 
-$product_features = $_POST['product_features'];
+// $product_features = $_POST['product_features'];
 
-$product_video = $_POST['product_video'];
+// $product_video = $_POST['product_video'];
 
 $status = "product";
 
@@ -573,10 +503,10 @@ move_uploaded_file($temp_name1,"product_images/$product_img1");
 move_uploaded_file($temp_name2,"product_images/$product_img2");
 move_uploaded_file($temp_name3,"product_images/$product_img3");
 
-$update_product = "UPDATE products SET p_cat_id=?, cat_id=?, manufacturer_id=?, date=NOW(), product_title=?, product_url=?, product_img1=?, product_img2=?, product_img3=?, product_price=?, product_psp_price=?, product_desc=?, product_features=?, product_video=?, product_keywords=?, product_label=?, status=? WHERE product_id=?";
+$update_product = "UPDATE products SET p_cat_id=?, cat_id=?, manufacturer_id=?, date=NOW(), product_title=?, product_url=?, product_img1=?, product_img2=?, product_img3=?, product_price=?, product_psp_price=?, product_desc=?, product_keywords=?, product_label=?, status=? WHERE product_id=?";
 
 $stmt = $con->prepare($update_product);
-$stmt->bind_param("iiisssssssssssssi", $product_cat, $cat, $manufacturer_id, $product_title, $product_url, $product_img1, $product_img2, $product_img3, $product_price, $psp_price, $product_desc, $product_features, $product_video, $product_keywords, $product_label, $status, $p_id);
+$stmt->bind_param("iiisssssssssssi", $product_cat, $cat, $manufacturer_id, $product_title, $product_url, $product_img1, $product_img2, $product_img3, $product_price, $psp_price, $product_desc, $product_keywords, $product_label, $status, $p_id);
 
 if ($stmt->execute()) {
     echo "<script>alert('Product has been updated successfully')</script>";
