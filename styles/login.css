@@ -72,6 +72,10 @@ form .text-center {
   flex-direction: column;
 }
 
+.text-center .group a {
+  color: #088178;
+}
+
 .text-center button {
   width: 100%;
   padding: 1rem;

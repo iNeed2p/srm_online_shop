@@ -371,7 +371,7 @@ $customer_confirm_code = mt_rand();
 
 $subject = "Email Confirmation Message";
 
-$from = "sad.ahmed22224@gmail.com";
+$from = "srmonlineshop@gmail.com";
 
 $message = "
 

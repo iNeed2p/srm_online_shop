@@ -60,8 +60,8 @@ function getPro(){
         $pro_psp_price = $row_products['product_psp_price'];
         $pro_url = $row_products['product_url'];
         if($pro_label == "Sale" or $pro_label == "Gift"){
-            $product_price = "<del> ₱$pro_price </del>";
-            $product_psp_price = "| ₱$pro_psp_price";
+            $product_price = "<del> ₱$pro_price</del>";
+            $product_psp_price = " | ₱$pro_psp_price";
         }
         else{
             $product_psp_price = "";
@@ -152,8 +152,8 @@ function getProducts(){
         $pro_psp_price = $row_products['product_psp_price'];
         $pro_url = $row_products['product_url'];
         if($pro_label == "Sale" or $pro_label == "Gift"){
-            $product_price = "<del> ₱$pro_price </del>";
-            $product_psp_price = "| ₱$pro_psp_price";
+            $product_price = "<del> ₱$pro_price</del>";
+            $product_psp_price = " | ₱$pro_psp_price";
         }
         else{
             $product_psp_price = "";
@@ -178,7 +178,7 @@ function getProducts(){
                     <p class='manufacturer_name'>$manufacturer_name </p>
                     <div class='product_details'>
                         <h3><a href='$pro_url' >$pro_title</a></h3>
-                        <p class='price' > ₱$product_price ₱$product_psp_price </p>
+                        <p class='price' > $product_price $product_psp_price </p>
                     </div>
                     <p class='buttons' >
                         <!--<a href='$pro_url' class='btn btn-default' >View Details</a>-->

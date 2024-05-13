@@ -74,16 +74,23 @@
         <nav class="main-nav">
           <ul class="categories">
             <li class="categories__item">
-              <a class="categories__link categories__link--active" href="../index.php">
+              <a class="categories__link categories__link--active" href="../shop.php">
                 Shop
               </a>
             </li>
 
-            <!-- <li class="categories__item">
+            <li class="categories__item">
               <a class="categories__link" href="../about.php">
                 About us
               </a>
-            </li> -->
+            </li>
+
+
+            <li class="categories__item">
+              <a class="categories__link" href="../contact.php">
+                Contact Us
+              </a>
+            </li>
 
             <li class="categories__item">
               <a class="categories__link" href="#">

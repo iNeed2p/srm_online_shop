@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
+@font-face {
+  font-family: "LeagueSpartan-Regular";
+  src: url(../fonts/LeagueSpartan-Regular.ttf);
+}
+
 /* General Styles */
 
 body {
   min-height: 100vh;
   position: relative;
-  font-family: 'League Spartan', Helvetica, Arial, sans-serif;
+  font-family: 'LeagueSpartan-Regular', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;

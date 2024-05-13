@@ -79,11 +79,18 @@
               </a>
             </li>
 
-            <!-- <li class="categories__item">
-              <a class="categories__link" href="localstore.php">
-                Local Stores
+            <li class="categories__item">
+              <a class="categories__link" href="about.php">
+                About us
               </a>
-            </li> -->
+            </li>
+
+
+            <li class="categories__item">
+              <a class="categories__link" href="contact.php">
+                Contact Us
+              </a>
+            </li>
 
             <li class="categories__item">
               <a class="categories__link" href="customer/my_account.php?my_orders">

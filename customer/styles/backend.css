@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 html {
-  font-family: 'League Spartan', Helvetica, Arial, sans-serif;
+  font-family: 'LeagueSpartan-Regular', Helvetica, Arial, sans-serif;
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: 'LeagueSpartan-Regular';
+  src: url(../fonts/LeagueSpartan-Regular.ttf);
 }
 
 body {
@@ -1002,6 +1007,8 @@ img {
   outline: 0;
   border: 0;
   border-radius: 4px;
+  font-family: 'LeagueSpartan-Regular', Helvetica, Arial, sans-serif;
+  font-family: 'League Spartan', sans-serif;
 }
 
 .btn.btn-primary {

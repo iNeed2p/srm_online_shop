@@ -5,9 +5,15 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+@font-face {
+  font-family: "LeagueSpartan-Regular";
+  src: url(../fonts/LeagueSpartan-Regular.ttf);
+}
+
 body {
   position: relative;
   margin: 0;
+  font-family: 'LeagueSpartan-Regular', Helvetica, Arial, sans-serif;
 }
 
 article,

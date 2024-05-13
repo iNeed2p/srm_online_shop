@@ -7,32 +7,6 @@ include("includes/header.php");
 include("functions/functions.php");
 include("includes/main.php");
 
-?>
-
-<main>
-  <!-- HERO -->
-  <div class="nero">
-    <div class="nero__heading">
-      <span class="nero__bold">About</span> us
-    </div>
-    <p class="nero__text">
-    </p>
-  </div>
-</main>
-
-<div id="content">
-  <!-- content Starts -->
-  <div class="container">
-    <!-- container Starts -->
-
-    <div class="col-md-12">
-      <!-- col-md-12 Starts -->
-
-      <div class="box">
-        <!-- box Starts -->
-
-        <?php
-
 $get_about_us = "select * from about_us";
 
 $run_about_us = mysqli_query($con,$get_about_us);
@@ -47,19 +21,22 @@ $about_desc = $row_about_us['about_desc'];
 
 ?>
 
-        <h1> <?php echo $about_heading; ?> </h1>
+<main class="about_container">
+  <!-- HERO -->
+  <div class="header user_header">
+    <h1 class="heading"> <?php echo $about_heading; ?> </h1>
+    <p class="lead"> <?php echo $about_short_desc; ?> </p>
+  </div>
 
-        <p class="lead"> <?php echo $about_short_desc; ?> </p>
+  <div class="about_desc">
+    <p> <?php echo $about_desc; ?> </p>
+  </div>
 
-        <p> <?php echo $about_desc; ?> </p>
-
-      </div><!-- box ends -->
-
-    </div><!-- col-md-12 ends -->
+</main>
 
 
 
-  </div><!-- container ends -->
+</div><!-- container ends -->
 </div><!-- content ends -->
 
 
