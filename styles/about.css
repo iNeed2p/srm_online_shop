@@ -7,7 +7,7 @@
   padding: 4rem;
 }
 
-.about_container .header {
+.about_container .header {  
   display: flex;
   align-items: center;
   justify-content: center;

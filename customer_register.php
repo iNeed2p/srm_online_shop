@@ -143,30 +143,6 @@ include("includes/main.php");
 
       </div><!-- form-group ends -->
 
-      <div class="form-group">
-        <!-- form-group Starts -->
-
-        <label> Customer Image </label>
-
-        <input type="file" class="form-control" name="c_image" required>
-
-      </div><!-- form-group ends -->
-
-
-      <div class="form-group">
-        <!-- form-group Starts -->
-
-        <center>
-
-          <!-- <label> Captcha Verification </label> -->
-
-          <!-- <div class="g-recaptcha" data-sitekey="6LcHnoQaAAAAAF_WTAEPkd_XO_9XC80G6N1MjrH2"></div> -->
-
-        </center>
-
-      </div><!-- form-group ends -->
-
-
       <div class="text-center">
         <!-- text-center Starts -->
 
@@ -345,13 +321,13 @@ $c_contact = $_POST['c_contact'];
 
 $c_address = $_POST['c_address'];
 
-$c_image = $_FILES['c_image']['name'];
+// $c_image = $_FILES['c_image']['name'];
 
-$c_image_tmp = $_FILES['c_image']['tmp_name'];
+// $c_image_tmp = $_FILES['c_image']['tmp_name'];
 
 $c_ip = getRealUserIp();
 
-move_uploaded_file($c_image_tmp,"customer/customer_images/$c_image");
+// move_uploaded_file($c_image_tmp,"customer/customer_images/$c_image");
 
 $get_email = "select * from customers where customer_email='$c_email'";
 

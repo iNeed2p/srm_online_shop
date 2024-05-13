@@ -22,7 +22,7 @@ $customer_contact = $row_customer['customer_contact'];
 
 $customer_address = $row_customer['customer_address'];
 
-$customer_image = $row_customer['customer_image'];
+// $customer_image = $row_customer['customer_image'];
 
 ?>
 <div class="header">
@@ -93,18 +93,6 @@ $customer_image = $row_customer['customer_image'];
 
   </div><!-- form-group ends -->
 
-  <div class="form-group">
-    <!-- form-group Starts -->
-
-    <label> Customer Image: </label>
-
-    <input type="file" name="c_image" class="form-control" required><br>
-
-    <img src="../customer_images/<?php echo $customer_image; ?>" width="100" height="100" class="img-responsive">
-
-
-  </div><!-- form-group ends -->
-
   <button name="update" class="btn btn-primary">
 
     <i class="fa fa-user-md"></i> Update Now
@@ -139,13 +127,7 @@ $c_contact = $_POST['c_contact'];
 
 $c_address = $_POST['c_address'];
 
-$c_image = $_FILES['c_image']['name'];
-
-$c_image_tmp = $_FILES['c_image']['tmp_name'];
-
-move_uploaded_file($c_image_tmp,"customer_images/$c_image");
-
-$update_customer = "update customers set customer_name='$c_name',customer_email='$c_email',customer_country='$c_country',customer_city='$c_city',customer_contact='$c_contact',customer_address='$c_address',customer_image='$c_image' where customer_id='$update_id'";
+$update_customer = "update customers set customer_name='$c_name',customer_email='$c_email',customer_country='$c_country',customer_city='$c_city',customer_contact='$c_contact',customer_address='$c_address' where customer_id='$update_id'";
 
 $run_customer = mysqli_query($con,$update_customer);
 

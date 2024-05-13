@@ -93,8 +93,8 @@ else {
 
           </div><!-- form-group ends -->
 
-          <div class="form-group">
-            <!-- form-group Starts -->
+          <!-- <div class="form-group">
+
 
             <label class="col-md-3 control-label"> Select Product Category Image</label>
 
@@ -104,7 +104,7 @@ else {
 
             </div>
 
-          </div><!-- form-group ends -->
+          </div> -->
 
           <div class="form-group">
             <!-- form-group Starts -->
@@ -138,13 +138,7 @@ $p_cat_title = $_POST['p_cat_title'];
 
 $p_cat_top = $_POST['p_cat_top'];
 
-$p_cat_image = $_FILES['p_cat_image']['name'];
-
-$temp_name = $_FILES['p_cat_image']['tmp_name'];
-
-move_uploaded_file($temp_name,"other_images/$p_cat_image");
-
-$insert_p_cat = "insert into product_categories (p_cat_title,p_cat_top,p_cat_image) values ('$p_cat_title','$p_cat_top','$p_cat_image')";
+$insert_p_cat = "insert into product_categories (p_cat_title,p_cat_top) values ('$p_cat_title','$p_cat_top')";
 
 $run_p_cat = mysqli_query($con,$insert_p_cat);
 

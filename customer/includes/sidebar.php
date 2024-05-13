@@ -7,14 +7,13 @@
     $get_customer = "select * from customers where customer_email='$customer_session'";
     $run_customer = mysqli_query($con,$get_customer);
     $row_customer = mysqli_fetch_array($run_customer);
-    $customer_image = $row_customer['customer_image'];
+    // $customer_image = $row_customer['customer_image'];
     $customer_name = $row_customer['customer_name'];
     if(!isset($_SESSION['customer_email'])){
     }
     else {
       echo "
       <div class='account_header'>
-      <!--<img src='customer_images/$customer_image' class='img-responsive user_image'>-->
       <h3 align='center' class='panel-title'>$customer_name </h3>
       </div>
       ";

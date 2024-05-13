@@ -48,7 +48,7 @@ else {
         <h3 class="panel-title">
           <!-- panel-title Starts -->
 
-           Insert Category
+          Insert Category
 
         </h3><!-- panel-title ends -->
 
@@ -95,19 +95,6 @@ else {
           <div class="form-group">
             <!-- form-group Starts -->
 
-            <label class="col-md-3 control-label">Select Category Image</label>
-
-            <div class="col-md-6">
-
-              <input type="file" name="cat_image" class="form-control">
-
-            </div>
-
-          </div><!-- form-group ends -->
-
-          <div class="form-group">
-            <!-- form-group Starts -->
-
             <label class="col-md-3 control-label"></label>
 
             <div class="col-md-6">
@@ -136,13 +123,7 @@ $cat_title = $_POST['cat_title'];
 
 $cat_top = $_POST['cat_top'];
 
-$cat_image = $_FILES['cat_image']['name'];
-
-$temp_name = $_FILES['cat_image']['tmp_name'];
-
-move_uploaded_file($temp_name,"other_images/$cat_image");
-
-$insert_cat = "insert into categories (cat_title,cat_top,cat_image) values ('$cat_title','$cat_top','$cat_image')";
+$insert_cat = "insert into categories (cat_title,cat_top) values ('$cat_title','$cat_top')";
 
 $run_cat = mysqli_query($con,$insert_cat);
 
