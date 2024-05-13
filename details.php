@@ -51,9 +51,9 @@ $pro_label = $row_product['product_label'];
 
 $pro_psp_price = $row_product['product_psp_price'];
 
-$pro_features = $row_product['product_features'];
+// $pro_features = $row_product['product_features'];
 
-$pro_video = $row_product['product_video'];
+// $pro_video = $row_product['product_video'];
 
 $status = $row_product['status'];
 
@@ -135,19 +135,19 @@ $p_cat_title = $row_p_cat['p_cat_title'];
 
                 <div class="item active">
                   <center>
-                    <img src="product_images/<?php echo $pro_img1; ?>" class="img-responsive">
+                    <img src="./admin/product_images/<?php echo $pro_img1; ?>" class="img-responsive">
                   </center>
                 </div>
 
                 <div class="item">
                   <center>
-                    <img src="product_images/<?php echo $pro_img2; ?>" class="img-responsive">
+                    <img src="./admin/product_images/<?php echo $pro_img2; ?>" class="img-responsive">
                   </center>
                 </div>
 
                 <div class="item">
                   <center>
-                    <img src="product_images/<?php echo $pro_img3; ?>" class="img-responsive">
+                    <img src="./admin/product_images/<?php echo $pro_img3; ?>" class="img-responsive">
                   </center>
                 </div>
 
@@ -181,7 +181,7 @@ $p_cat_title = $row_p_cat['p_cat_title'];
 
                 <a href="#" class="thumb">
 
-                  <img src="product_images/<?php echo $pro_img1; ?>" class="img-responsive">
+                  <img src="./admin/product_images/<?php echo $pro_img1; ?>" class="img-responsive">
 
                 </a>
 
@@ -192,7 +192,7 @@ $p_cat_title = $row_p_cat['p_cat_title'];
 
                 <a href="#" class="thumb">
 
-                  <img src="product_images/<?php echo $pro_img2; ?>" class="img-responsive">
+                  <img src="./admin/product_images/<?php echo $pro_img2; ?>" class="img-responsive">
 
                 </a>
 
@@ -203,7 +203,7 @@ $p_cat_title = $row_p_cat['p_cat_title'];
 
                 <a href="#" class="thumb">
 
-                  <img src="product_images/<?php echo $pro_img3; ?>" class="img-responsive">
+                  <img src="./admin/product_images/<?php echo $pro_img3; ?>" class="img-responsive">
 
                 </a>
 

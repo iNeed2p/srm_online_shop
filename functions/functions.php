@@ -80,7 +80,7 @@ function getPro(){
         <div class='col-md-4 col-sm-6 single' >
             <div class='product' >
                 <a href='$pro_url' >
-                    <img src='product_images/$pro_img1' class='img-responsive' >
+                    <img src='./admin/product_images/$pro_img1' class='img-responsive' >
                 </a>
                 <div class='text' >
                     <p class='manufacturer_name'>$manufacturer_name </p>
@@ -172,7 +172,7 @@ function getProducts(){
         <div class='col-md-4 col-sm-6 single' >
             <div class='product' >
                 <a href='$pro_url' >
-                    <img src='./product_images/$pro_img1' class='img-responsive' >
+                    <img src='./admin/product_images/$pro_img1' class='img-responsive' >
                 </a>
                 <div class='text'>
                     <p class='manufacturer_name'>$manufacturer_name </p>

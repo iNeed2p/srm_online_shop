@@ -297,7 +297,7 @@ echo "<option value='$cat_id'>$cat_title</option>";
             <div class="form-group">
               <!-- form-group Starts -->
 
-              <label class="col-md-3 control-label"> Product Tabs </label>
+              <label class="col-md-3 control-label"> Product Description </label>
 
               <div class="col-md-6">
                 <textarea name="product_desc" class="form-control" rows="15" id="product_desc"></textarea>
@@ -366,9 +366,9 @@ echo "<option value='$cat_id'>$cat_title</option>";
 
   $product_url = $_POST['product_url'];
 
-  $product_features = $_POST['product_features'];
+  // $product_features = $_POST['product_features'];
 
-  $product_video = $_POST['product_video'];
+  // $product_video = $_POST['product_video'];
 
   $status = "product";
 
@@ -386,10 +386,10 @@ echo "<option value='$cat_id'>$cat_title</option>";
 
   // $insert_product = "insert into products (p_cat_id,cat_id,manufacturer_id,date,product_title,product_url,product_img1,product_img2,product_img3,product_price,product_psp_price,product_desc,product_features,product_video,product_keywords,product_label,status) values ('$product_cat','$cat','$manufacturer_id',NOW(),'$product_title','$product_url','$product_img1','$product_img2','$product_img3','$product_price','$psp_price','$product_desc','$product_features','$product_video','$product_keywords','$product_label','$status')";
 
-  $insert_product = "INSERT INTO products (p_cat_id, cat_id, manufacturer_id, date, product_title, product_url, product_img1, product_img2, product_img3, product_price, product_psp_price, product_desc, product_features, product_video, product_keywords, product_label, status) VALUES (?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  $insert_product = "INSERT INTO products (p_cat_id, cat_id, manufacturer_id, date, product_title, product_url, product_img1, product_img2, product_img3, product_price, product_psp_price, product_desc, product_keywords, product_label, status) VALUES (?, ?, ?, NOW(), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
   $stmt = $con->prepare($insert_product);
-  $stmt->bind_param("iiisssssssssssss", $product_cat, $cat, $manufacturer_id, $product_title, $product_url, $product_img1, $product_img2, $product_img3, $product_price, $psp_price, $product_desc, $product_features, $product_video, $product_keywords, $product_label, $status);
+  $stmt->bind_param("iiisssssssssss", $product_cat, $cat, $manufacturer_id, $product_title, $product_url, $product_img1, $product_img2, $product_img3, $product_price, $psp_price, $product_desc, $product_keywords, $product_label, $status);
 
 if ($stmt->execute()) {
     echo "<script>alert('Product has been inserted successfully')</script>";

@@ -71,7 +71,6 @@ else {
                 <th>#</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Image</th>
                 <th>Country</th>
                 <th>City</th>
                 <th>Phone Number</th>
@@ -102,7 +101,7 @@ $c_name = $row_c['customer_name'];
 
 $c_email = $row_c['customer_email'];
 
-$c_image = $row_c['customer_image'];
+// $c_image = $row_c['customer_image'];
 
 $c_country = $row_c['customer_country'];
 
@@ -124,8 +123,6 @@ $i++;
                 <td><?php echo $c_name; ?></td>
 
                 <td><?php echo $c_email; ?></td>
-
-                <td><img src="../customer/customer_images/<?php echo $c_image; ?>" width="60" height="60"></td>
 
                 <td><?php echo $c_country; ?></td>
 
