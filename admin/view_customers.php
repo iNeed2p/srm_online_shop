@@ -47,7 +47,7 @@ else {
         <h3 class="panel-title">
           <!-- panel-title Starts -->
 
-           View Customers
+          View Customers
 
         </h3><!-- panel-title ends -->
 
@@ -74,7 +74,7 @@ else {
                 <th>Country</th>
                 <th>City</th>
                 <th>Phone Number</th>
-                <th>Delete</th>
+                <!-- <th>Delete</th> -->
 
 
               </tr>
@@ -130,7 +130,7 @@ $i++;
 
                 <td><?php echo $c_contact; ?></td>
 
-                <td class="button delete">
+                <!-- <td class="button delete">
 
                   <a href="index.php?customer_delete=<?php echo $c_id; ?>">
 
@@ -139,7 +139,7 @@ $i++;
                   </a>
 
 
-                </td>
+                </td> -->
 
 
               </tr>

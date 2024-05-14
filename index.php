@@ -18,7 +18,6 @@ include("includes/main.php");
         <h4>Trade-in-Offers</h4>
         <h2>Super <br> <span>Value Deals</span></h2>
         <h1>On All Products</h1>
-        <p>Save more with coupons & up to 70% off!</p>
       </div>
       <a href="shop.php" class="btn1">View all products</a>
     </div>

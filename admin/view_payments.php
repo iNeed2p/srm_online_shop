@@ -50,7 +50,7 @@ else {
         <h3 class="panel-title">
           <!-- panel-title Starts -->
 
-           View Payments
+          View Payments
 
         </h3><!-- panel-title ends -->
 
@@ -77,7 +77,7 @@ else {
                 <th>Reference #</th>
                 <th>Payment Code</th>
                 <th>Payment Date</th>
-                <th>Action</th>
+                <!-- <th>Action</th> -->
 
               </tr>
 
@@ -133,7 +133,7 @@ $i++;
 
                 <td><?php echo $payment_date; ?></td>
 
-                <td class="button delete">
+                <!-- <td class="button delete">
 
                   <a href="index.php?payment_delete=<?php echo $payment_id; ?>">
 
@@ -141,7 +141,7 @@ $i++;
 
                   </a>
 
-                </td>
+                </td> -->
 
 
               </tr>

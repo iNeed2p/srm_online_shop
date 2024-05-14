@@ -380,9 +380,9 @@ echo "<option value='$cat_id'>$cat_title</option>";
   $temp_name2 = $_FILES['product_img2']['tmp_name'];
   $temp_name3 = $_FILES['product_img3']['tmp_name'];
 
-  move_uploaded_file($temp_name1,"product_images/$product_img1");
-  move_uploaded_file($temp_name2,"product_images/$product_img2");
-  move_uploaded_file($temp_name3,"product_images/$product_img3");
+  // move_uploaded_file($temp_name1,"product_images/$product_img1");
+  // move_uploaded_file($temp_name2,"product_images/$product_img2");
+  // move_uploaded_file($temp_name3,"product_images/$product_img3");
 
   // $insert_product = "insert into products (p_cat_id,cat_id,manufacturer_id,date,product_title,product_url,product_img1,product_img2,product_img3,product_price,product_psp_price,product_desc,product_features,product_video,product_keywords,product_label,status) values ('$product_cat','$cat','$manufacturer_id',NOW(),'$product_title','$product_url','$product_img1','$product_img2','$product_img3','$product_price','$psp_price','$product_desc','$product_features','$product_video','$product_keywords','$product_label','$status')";
 

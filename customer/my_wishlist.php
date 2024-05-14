@@ -79,7 +79,7 @@ $i++;
 
         <td>
 
-          <img src="../product_images/<?php echo $product_img1; ?>" width="60" height="60">
+          <img src="../admin/product_images/<?php echo $product_img1; ?>" width="60" height="60">
 
           &nbsp;&nbsp;&nbsp;
 

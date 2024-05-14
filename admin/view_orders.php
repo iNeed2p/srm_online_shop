@@ -46,7 +46,7 @@ if (!isset($_SESSION['admin_email'])) {
                 <th>Order Date</th>
                 <th>Total Amount</th>
                 <th>Status</th>
-                <th>Action</th>
+                <!-- <th>Action</th> -->
               </tr>
             </thead>
             <tbody>
@@ -107,11 +107,11 @@ if (!isset($_SESSION['admin_email'])) {
                 <td>₱<?php echo $due_amount ?></td>
                 <td><?php echo $order_status == 'pending' ? '<div style="color:red;">Pending</div>' : 'Completed'; ?>
                 </td>
-                <td class="button delete">
+                <!-- <td class="button delete">
                   <a href="index.php?order_delete=<?php echo $order_id; ?>">
                     <i class="fa fa-trash-o"></i>
                   </a>
-                </td>
+                </td> -->
               </tr>
               <?php } ?>
             </tbody>
