@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 14, 2024 at 08:18 AM
+-- Generation Time: May 24, 2024 at 04:28 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,7 +39,7 @@ CREATE TABLE `about_us` (
 --
 
 INSERT INTO `about_us` (`about_id`, `about_heading`, `about_short_desc`, `about_desc`) VALUES
-(1, 'About Us', '\r\n\r\n\r\nMauris nec leo est. Phasellus accumsan sollicitudin sapien, eu ultrices diam posuere nec.\r\n\r\n\r\n', '\r\n\r\n\r\nMaecenas ut mi a magna facilisis laoreet in non augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse est urna, placerat sit amet ultricies ut, pretium eget est. \r\n\r\n<br>\r\n<br>\r\n\r\nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sed pharetra sem. Sed tincidunt massa ac justo malesuada, non facilisis urna scelerisque. Sed magna mauris, consequat nec ultrices vel, dictum eu sapien. Proin vel orci urna. \r\n\r\n<br>\r\n<br>\r\n\r\nSuspendisse justo dolor, sollicitudin sit amet hendrerit vel, malesuada eu justo. Nam euismod orci sit amet sem fringilla euismod. In tellus urna, rutrum eget libero sit amet, cursus interdum lorem. Aliquam sed nisl a nulla faucibus porta.\r\n\r\n\r\n');
+(1, 'About Us', '\r\n\r\n\r\n\r\nMauris nec leo est. Phasellus accumsan sollicitudin sapien, eu ultrices diam posuere nec.\r\n\r\n\r\n\r\n', '\r\n\r\n\r\n\r\nMaecenas ut mi a magna facilisis laoreet in non augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse est urna, placerat sit amet ultricies ut, pretium eget est. \r\n\r\n<br>\r\n<br>\r\n\r\nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sed pharetra sem. Sed tincidunt massa ac justo malesuada, non facilisis urna scelerisque. Sed magna mauris, consequat nec ultrices vel, dictum eu sapien. Proin vel orci urna. \r\n\r\n<br>\r\n<br>\r\n\r\nSuspendisse justo dolor, sollicitudin sit amet hendrerit vel, malesuada eu justo. Nam euismod orci sit amet sem fringilla euismod. In tellus urna, rutrum eget libero sit amet, cursus interdum lorem. Aliquam sed nisl a nulla faucibus porta.\r\n\r\n\r\n\r\n');
 
 -- --------------------------------------------------------
 
@@ -79,13 +79,6 @@ CREATE TABLE `cart` (
   `p_price` varchar(255) NOT NULL,
   `size` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`, `size`) VALUES
-(22, '::1', 1, '5495', 'Medium');
 
 -- --------------------------------------------------------
 
@@ -155,9 +148,7 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_ip`, `customer_confirm_code`) VALUES
-(1, 'Juan Dela Cruz', 'juandelacruz@mail.com', 'juandelacruz1!', 'Philippines', 'Taguig', '09123456789', 'Upper Bicutan, Taguig City', 'person-profile.png', '::1', '1008045072'),
-(5, 'Test', 'test@mail.com', 'test', 'Philippines', 'Taguig', '09987654321', 'Upper Bicutan, Taguig City', '', '::1', '1234379085'),
-(6, 'Fat', 'fat@gmail.com', 'fat123!', 'Philippines', 'Taguig', '09987654321', 'Upper Bicutan, Taguig City', '', '::1', '457063921');
+(1, 'Test ', 'test@mail.com', 'test123', 'Philippines', 'Taguig', '09987654321', 'Upper Bicutan, Taguig City', '', '::1', '684134099');
 
 -- --------------------------------------------------------
 
@@ -181,12 +172,9 @@ CREATE TABLE `customer_orders` (
 --
 
 INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice_no`, `qty`, `size`, `order_date`, `order_status`) VALUES
-(1, 1, 6248, 396049529, 1, 'Medium', '2024-05-10 13:58:48', 'Complete'),
-(2, 1, 4319, 396049529, 1, 'Medium', '2024-05-10 14:05:05', 'Complete'),
-(3, 1, 6248, 1452338437, 1, 'Medium', '2024-05-14 05:11:03', 'Complete'),
-(4, 1, 4479, 3684853, 1, 'Small', '2024-05-14 05:38:02', 'Complete'),
-(5, 1, 6895, 1391843560, 1, 'Medium', '2024-05-14 06:09:16', 'Complete'),
-(6, 1, 8958, 1079517825, 2, 'Medium', '2024-05-14 06:11:56', 'Complete');
+(1, 1, 6895, 1733280838, 1, 'Medium', '2024-05-24 02:25:14', 'Complete'),
+(2, 1, 6248, 770974077, 1, 'Medium', '2024-05-24 02:26:25', 'Complete'),
+(3, 1, 4319, 770974077, 1, 'Medium', '2024-05-24 02:26:52', 'Complete');
 
 -- --------------------------------------------------------
 
@@ -249,12 +237,9 @@ CREATE TABLE `payments` (
 --
 
 INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `ref_no`, `code`, `payment_date`) VALUES
-(1, 396049529, 6248, 'Western Union', 396049529, 396049529, '05-10-2024'),
-(2, 396049529, 4319, 'Western Union', 396049529, 396049529, '05-10-2024'),
-(3, 1452338437, 6248, 'Western Union', 1452338437, 1452338437, '05-14-2024'),
-(4, 3684853, 4479, 'Western Union', 3684853, 3684853, '05-14-2024'),
-(5, 1391843560, 6895, 'Western Union', 1391843560, 1391843560, '05-14-2024'),
-(6, 1079517825, 8958, 'Western Union', 1079517825, 1079517825, '05-14-2024');
+(1, 1733280838, 6895, 'Western Union', 1733280838, 1733280838, '05-24-2024'),
+(2, 770974077, 6248, 'Western Union', 770974077, 770974077, '05-24-2024'),
+(3, 770974077, 4319, 'Western Union', 770974077, 770974077, '05-24-2024');
 
 -- --------------------------------------------------------
 
@@ -277,12 +262,9 @@ CREATE TABLE `pending_orders` (
 --
 
 INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_id`, `qty`, `size`, `order_status`) VALUES
-(1, 1, 396049529, '17', 1, 'Medium', 'Complete'),
-(2, 1, 396049529, '19', 1, 'Medium', 'Complete'),
-(3, 1, 1452338437, '17', 1, 'Medium', 'Complete'),
-(4, 1, 3684853, '23', 1, 'Small', 'Complete'),
-(5, 1, 1391843560, '24', 1, 'Medium', 'Complete'),
-(6, 1, 1079517825, '23', 2, 'Medium', 'Complete');
+(1, 1, 1733280838, '24', 1, 'Medium', 'Complete'),
+(2, 1, 770974077, '17', 1, 'Medium', 'Complete'),
+(3, 1, 770974077, '19', 1, 'Medium', 'Complete');
 
 -- --------------------------------------------------------
 
@@ -363,13 +345,6 @@ CREATE TABLE `store` (
   `store_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `store`
---
-
-INSERT INTO `store` (`store_id`, `store_title`, `store_image`, `store_desc`, `store_button`, `store_url`) VALUES
-(4, 'Earth Store', 'wallpaperflare.com_wallpaper.jpg', '\r\n<p style=\"text-align: center;\"><strong>Earth Store</strong></p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero erat, aliquet eget mauris ut, dictum sagittis libero.</p>\r\n', 'View Map', 'http://www.google.com');
-
 -- --------------------------------------------------------
 
 --
@@ -409,17 +384,7 @@ CREATE TABLE `wishlist` (
 --
 
 INSERT INTO `wishlist` (`wishlist_id`, `customer_id`, `product_id`) VALUES
-(2, 2, 8),
-(4, 3, 13),
-(5, 6, 15),
-(6, 7, 15),
-(7, 10, 15),
-(8, 11, 9),
-(9, 13, 19),
-(10, 5, 19),
-(11, 1, 18),
-(12, 1, 23),
-(13, 1, 24);
+(1, 1, 17);
 
 --
 -- Indexes for dumped tables
@@ -553,13 +518,13 @@ ALTER TABLE `contact_us`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `customer_orders`
 --
 ALTER TABLE `customer_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `enquiry_types`
@@ -577,13 +542,13 @@ ALTER TABLE `manufacturers`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pending_orders`
 --
 ALTER TABLE `pending_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -601,7 +566,7 @@ ALTER TABLE `product_categories`
 -- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
-  MODIFY `store_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `store_id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `terms`
@@ -613,7 +578,7 @@ ALTER TABLE `terms`
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `wishlist_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `wishlist_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
