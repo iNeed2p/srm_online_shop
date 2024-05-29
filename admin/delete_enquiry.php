@@ -23,7 +23,7 @@ $run_delete = mysqli_query($con,$delete_enquiry);
 
 if($run_delete){
 
-echo "<script>alert('One Enquiry Type Has Been Deleted')</script>";
+echo "<script>alert('One enquiry type has been deleted')</script>";
 
 echo "<script>window.open('index.php?view_enquiry','_self')</script>";
 

@@ -42,9 +42,20 @@
 
       <tr>
 
-        <td> Bank Name: ubl <br> Account No: 03333333<br> Branch Code: 0342<br> Branch Name: DemoBranch </td>
-        <td> Full Name: Demo Name,<br> Mobile No: 7000015000, <br>Name: Demo,<br> Country: US,<br> N.I.C No: 011234567
+        <td>
+          Bank Name: BDO <br>
+          Account No: 1234567890<br>
+          Branch Code: 001<br>
+          Branch Name: Taguig Branch
         </td>
+        <td>
+          Full Name: Walter Guevarra,<br>
+          Mobile No: 09171234567,<br>
+          Address: Taguig City,<br>
+          Country: Philippines,<br>
+          ID No: 123456789012
+        </td>
+
 
 
       </tr>

@@ -122,7 +122,7 @@ include("includes/main.php");
 
               <td>
 
-                $<?php echo $only_price; ?>.00
+                ₱<?php echo $only_price; ?>.00
 
               </td>
 
@@ -253,7 +253,7 @@ include("includes/main.php");
 
               <td> Order Subtotal </td>
 
-              <th> $<?php echo $total; ?>.00 </th>
+              <th> ₱<?php echo $total; ?>.00 </th>
 
             </tr>
 
@@ -261,7 +261,7 @@ include("includes/main.php");
 
               <td> Shipping and handling </td>
 
-              <th>$0.00</th>
+              <th>₱0.00</th>
 
             </tr>
 
@@ -269,7 +269,7 @@ include("includes/main.php");
 
               <td>Tax</td>
 
-              <th>$0.00</th>
+              <th>₱0.00</th>
 
             </tr>
 
@@ -277,7 +277,7 @@ include("includes/main.php");
 
               <td>Total</td>
 
-              <th>$<?php echo $total; ?>.00</th>
+              <th>₱<?php echo $total; ?>.00</th>
 
             </tr>
 
