@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 24, 2024 at 04:28 AM
+-- Generation Time: May 30, 2024 at 04:47 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -80,6 +80,14 @@ CREATE TABLE `cart` (
   `size` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`, `size`) VALUES
+(19, '::1', 1, '4319', 'Small'),
+(24, '::1', 4, '6895', '40');
+
 -- --------------------------------------------------------
 
 --
@@ -148,7 +156,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_ip`, `customer_confirm_code`) VALUES
-(1, 'Test ', 'test@mail.com', 'test123', 'Philippines', 'Taguig', '09987654321', 'Upper Bicutan, Taguig City', '', '::1', '684134099');
+(1, 'Testing System', 'test@mail.com', '$2y$10$juYRMvbQJ2WXayOAh6szpOdKJbkLb7z6CNU.UIbAAF3iBYw/1N2rS', 'Philippines', 'Taguig', '09987654321', 'Upper Bicutan, Taguig City', 'default_image.png', '::1', ''),
+(2, 'Juan Dela Cruz', 'cruz@mail.com', '$2y$10$xGrNHfOcjwzkRrnhTbb3oeil0JVK7osvD5Z2FcdkIVm8XnOaLFTAW', 'Philippines', 'Taguig', '09123456789', 'Upper Bicutan, Taguig City', 'default_image.png', '::1', '');
 
 -- --------------------------------------------------------
 
@@ -172,9 +181,8 @@ CREATE TABLE `customer_orders` (
 --
 
 INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice_no`, `qty`, `size`, `order_date`, `order_status`) VALUES
-(1, 1, 6895, 1733280838, 1, 'Medium', '2024-05-24 02:25:14', 'Complete'),
-(2, 1, 6248, 770974077, 1, 'Medium', '2024-05-24 02:26:25', 'Complete'),
-(3, 1, 4319, 770974077, 1, 'Medium', '2024-05-24 02:26:52', 'Complete');
+(1, 1, 6895, 1114394739, 1, '38', '2024-05-29 10:44:16', 'Complete'),
+(2, 1, 4319, 1169045086, 1, 'Medium', '2024-05-29 10:56:17', 'pending');
 
 -- --------------------------------------------------------
 
@@ -228,7 +236,6 @@ CREATE TABLE `payments` (
   `amount` int(10) NOT NULL,
   `payment_mode` text NOT NULL,
   `ref_no` int(10) NOT NULL,
-  `code` int(10) NOT NULL,
   `payment_date` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -236,10 +243,8 @@ CREATE TABLE `payments` (
 -- Dumping data for table `payments`
 --
 
-INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `ref_no`, `code`, `payment_date`) VALUES
-(1, 1733280838, 6895, 'Western Union', 1733280838, 1733280838, '05-24-2024'),
-(2, 770974077, 6248, 'Western Union', 770974077, 770974077, '05-24-2024'),
-(3, 770974077, 4319, 'Western Union', 770974077, 770974077, '05-24-2024');
+INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `ref_no`, `payment_date`) VALUES
+(1, 1114394739, 6895, 'Cebuana', 1114394739, '2024-05-31');
 
 -- --------------------------------------------------------
 
@@ -262,9 +267,8 @@ CREATE TABLE `pending_orders` (
 --
 
 INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_id`, `qty`, `size`, `order_status`) VALUES
-(1, 1, 1733280838, '24', 1, 'Medium', 'Complete'),
-(2, 1, 770974077, '17', 1, 'Medium', 'Complete'),
-(3, 1, 770974077, '19', 1, 'Medium', 'Complete');
+(1, 1, 1114394739, '18', 1, '38', 'Complete'),
+(2, 1, 1169045086, '19', 1, 'Medium', 'pending');
 
 -- --------------------------------------------------------
 
@@ -384,7 +388,7 @@ CREATE TABLE `wishlist` (
 --
 
 INSERT INTO `wishlist` (`wishlist_id`, `customer_id`, `product_id`) VALUES
-(1, 1, 17);
+(2, 1, 18);
 
 --
 -- Indexes for dumped tables
@@ -518,13 +522,13 @@ ALTER TABLE `contact_us`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `customer_orders`
 --
 ALTER TABLE `customer_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `enquiry_types`
@@ -542,13 +546,13 @@ ALTER TABLE `manufacturers`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pending_orders`
 --
 ALTER TABLE `pending_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -578,7 +582,7 @@ ALTER TABLE `terms`
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `wishlist_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `wishlist_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
