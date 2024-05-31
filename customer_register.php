@@ -22,9 +22,29 @@ if (isset($_POST['register'])) {
     // Check if contact number is exactly 11 digits
     if (strlen($c_contact) != 11) {
         echo "<script>alert('Contact number must be exactly 11 digits')</script>";
-        echo "<script>window.location.href = 'customer_register.php';</script>";
+        // echo "<script>window.location.href = 'customer_register.php';</script>";
+        echo "<script>window.location.href = 'customer_register.php?c_name=".urlencode($c_name)."&c_email=".urlencode($c_email)."&c_country=".urlencode($c_country)."&c_city=".urlencode($c_city)."&c_address=".urlencode($c_address)."';</script>";
         exit();
     }
+    
+     // Validate email format
+    $valid_domains = ['yahoo.com', 'mail.com', 'gmail.com'];
+    $email_parts = explode('@', $c_email);
+    $domain = array_pop($email_parts);
+
+    if (!filter_var($c_email, FILTER_VALIDATE_EMAIL) || !in_array($domain, $valid_domains)) {
+        echo "<script>alert('Invalid email format.')</script>";
+        echo "<script>window.location.href = 'customer_register.php?c_name=".urlencode($c_name)."&c_email=".urlencode($c_email)."&c_country=".urlencode($c_country)."&c_city=".urlencode($c_city)."&c_address=".urlencode($c_address)."';</script>";
+        exit();
+    }
+
+    // Validate email format
+    // if (!filter_var($c_email, FILTER_VALIDATE_EMAIL)) {
+    //     echo "<script>alert('Invalid email format')</script>";
+    //     // echo "<script>window.location.href = 'customer_register.php';</script>";
+    //     echo "<script>window.location.href = 'customer_register.php?c_name=".urlencode($c_name)."&c_email=".urlencode($c_email)."&c_country=".urlencode($c_country)."&c_city=".urlencode($c_city)."&c_address=".urlencode($c_address)."';</script>";
+    //     exit();
+    // }
 
     // Check if email is already registered
     $get_email = "SELECT * FROM customers WHERE customer_email='$c_email'";
@@ -33,7 +53,7 @@ if (isset($_POST['register'])) {
 
     if ($check_email == 1) {
         echo "<script>alert('This email is already registered, try another one')</script>";
-        echo "<script>window.location.href = 'customer_register.php';</script>";
+        echo "<script>window.location.href = 'customer_register.php?c_name=".urlencode($c_name)."&c_email=".urlencode($c_email)."&c_country=".urlencode($c_country)."&c_city=".urlencode($c_city)."&c_address=".urlencode($c_address)."';</script>";
         exit();
     }
 
@@ -43,9 +63,9 @@ if (isset($_POST['register'])) {
     $check_contact = mysqli_num_rows($run_contact);
 
     if ($check_contact == 1) {
-    echo "<script>alert('This contact number is already registered, try another one')</script>";
-    echo "<script>window.location.href = 'customer_register.php?c_name=".urlencode($c_name)."&c_email=".urlencode($c_email)."&c_country=".urlencode($c_country)."&c_city=".urlencode($c_city)."&c_address=".urlencode($c_address)."';</script>";
-    exit();
+        echo "<script>alert('This contact number is already registered, try another one')</script>";
+        echo "<script>window.location.href = 'customer_register.php?c_name=".urlencode($c_name)."&c_email=".urlencode($c_email)."&c_country=".urlencode($c_country)."&c_city=".urlencode($c_city)."&c_address=".urlencode($c_address)."';</script>";
+        exit();
     }
     
     // Insert customer into the database
@@ -71,7 +91,6 @@ if (isset($_POST['register'])) {
   </div>
 </main>
 
-
 <div id="content">
   <!-- content Starts -->
   <div class="container register_container">
@@ -80,141 +99,84 @@ if (isset($_POST['register'])) {
       <!-- form Starts -->
       <div class="form-group">
         <!-- form-group Starts -->
-
         <label>Customer Name</label>
-
-        <input type="text" class="form-control" name="c_name"
-          value="<?php if(isset($_GET['c_name'])) echo htmlspecialchars($_GET['c_name']); ?>" required>
-
+        <input type="text" class="form-control" name="c_name" value="<?php if(isset($_GET['c_name'])) echo htmlspecialchars($_GET['c_name']); ?>" required>
       </div><!-- form-group ends -->
 
       <div class="form-group">
         <!-- form-group Starts -->
-
         <label> Customer Email</label>
-
-        <input type="text" class="form-control" name="c_email"
-          value="<?php if(isset($_GET['c_email'])) echo htmlspecialchars($_GET['c_email']); ?>" required>
-
+        <input type="text" class="form-control" name="c_email" value="<?php if(isset($_GET['c_email'])) echo htmlspecialchars($_GET['c_email']); ?>" required>
       </div><!-- form-group ends -->
 
       <div class="form-group">
         <!-- form-group Starts -->
-
         <label> Customer Password </label>
-
         <div class="input-group">
           <!-- input-group Starts -->
-
           <span class="input-group-addon">
             <!-- input-group-addon Starts -->
-
             <i class="fa fa-check tick1"> </i>
-
             <i class="fa fa-times cross1"> </i>
-
           </span><!-- input-group-addon ends -->
-
           <input type="password" class="form-control" id="pass" name="c_pass" required>
-
           <span class="input-group-addon">
             <!-- input-group-addon Starts -->
-
             <div id="meter_wrapper">
               <!-- meter_wrapper Starts -->
-
               <span id="pass_type"> </span>
-
               <div id="meter"> </div>
-
             </div><!-- meter_wrapper ends -->
-
           </span><!-- input-group-addon ends -->
-
         </div><!-- input-group ends -->
-
       </div><!-- form-group ends -->
-
 
       <div class="form-group">
         <!-- form-group Starts -->
-
         <label> Confirm Password </label>
-
         <div class="input-group">
           <!-- input-group Starts -->
-
           <span class="input-group-addon">
             <!-- input-group-addon Starts -->
-
             <i class="fa fa-check tick2"> </i>
-
             <i class="fa fa-times cross2"> </i>
-
           </span><!-- input-group-addon ends -->
-
           <input type="password" class="form-control confirm" id="con_pass" required>
-
         </div><!-- input-group ends -->
-
       </div><!-- form-group ends -->
-
 
       <div class="form-group">
         <!-- form-group Starts -->
-
         <label> Customer Country </label>
-
-        <input type="text" class="form-control" name="c_country"
-          value="<?php if(isset($_GET['c_country'])) echo htmlspecialchars($_GET['c_country']); ?>" required>
-
+        <input type="text" class="form-control" name="c_country" value="<?php if(isset($_GET['c_country'])) echo htmlspecialchars($_GET['c_country']); ?>" required>
       </div><!-- form-group ends -->
 
       <div class="form-group">
         <!-- form-group Starts -->
-
         <label> Customer City </label>
-
-        <input type="text" class="form-control" name="c_city"
-          value="<?php if(isset($_GET['c_city'])) echo htmlspecialchars($_GET['c_city']); ?>" required>
-
+        <input type="text" class="form-control" name="c_city" value="<?php if(isset($_GET['c_city'])) echo htmlspecialchars($_GET['c_city']); ?>" required>
       </div><!-- form-group ends -->
 
       <div class="form-group">
         <label> Customer Contact </label>
-        <input type="text" class="form-control" name="c_contact" pattern="\d{11}"
-          title="Contact number must be 11 digits"
-          value="<?php if(isset($_POST['c_contact'])) echo $_POST['c_contact']; ?>" required>
+        <input type="text" class="form-control" name="c_contact" pattern="\d{11}" title="Contact number must be 11 digits" value="<?php if(isset($_POST['c_contact'])) echo $_POST['c_contact']; ?>" required>
       </div>
-
 
       <div class="form-group">
         <!-- form-group Starts -->
-
         <label> Customer Address </label>
-
-        <input type="text" class="form-control" name="c_address"
-          value="<?php if(isset($_GET['c_address'])) echo htmlspecialchars($_GET['c_address']); ?>" required>
-
+        <input type="text" class="form-control" name="c_address" value="<?php if(isset($_GET['c_address'])) echo htmlspecialchars($_GET['c_address']); ?>" required>
       </div><!-- form-group ends -->
 
       <div class="text-center">
         <!-- text-center Starts -->
-
         <button type="submit" name="register" class="btn btn-primary">
-
           <i class="fa fa-user-md"></i> Register
-
         </button>
-
       </div><!-- text-center ends -->
-
     </form><!-- form ends -->
-
   </div><!-- container ends -->
 </div><!-- content ends -->
-
-
 
 <?php
 
@@ -223,62 +185,36 @@ include("includes/footer.php");
 ?>
 
 <script src="js/jquery.min.js"> </script>
-
 <script src="js/bootstrap.min.js"></script>
 
 <script>
 $(document).ready(function() {
-
   $('.tick1').hide();
   $('.cross1').hide();
-
   $('.tick2').hide();
   $('.cross2').hide();
 
-
   $('.confirm').focusout(function() {
-
     var password = $('#pass').val();
-
     var confirmPassword = $('#con_pass').val();
-
     if (password == confirmPassword) {
-
       $('.tick1').show();
       $('.cross1').hide();
-
       $('.tick2').show();
       $('.cross2').hide();
-
-
-
     } else {
-
       $('.tick1').hide();
       $('.cross1').show();
-
       $('.tick2').hide();
       $('.cross2').show();
-
-
     }
-
-
   });
-
-
 });
-</script>
 
-<script>
 $(document).ready(function() {
-
   $("#pass").keyup(function() {
-
     check_pass();
-
   });
-
 });
 
 function check_pass() {
@@ -288,50 +224,36 @@ function check_pass() {
   if (val != "") {
     // If the password length is less than or equal to 6
     if (val.length <= 6) no = 1;
-
     // If the password length is greater than 6 and contain any lowercase alphabet or any number or any special character
     if (val.length > 6 && (val.match(/[a-z]/) || val.match(/\d+/) || val.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/)))
-      no =
-      2;
-
+      no = 2;
     // If the password length is greater than 6 and contain alphabet,number,special character respectively
     if (val.length > 6 && ((val.match(/[a-z]/) && val.match(/\d+/)) || (val.match(/\d+/) && val.match(
         /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/)) || (val.match(/[a-z]/) && val.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/))))
-      no =
-      3;
-
+      no = 3;
     // If the password length is greater than 6 and must contain alphabets,numbers and special characters
-    if (val.length > 6 && val.match(/[a-z]/) && val.match(/\d+/) && val.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/)) no =
-      4;
+    if (val.length > 6 && val.match(/[a-z]/) && val.match(/\d+/) && val.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/)) no = 4;
 
     if (no == 1) {
-      $("#meter").animate({
-        width: '50px'
-      }, 300);
+      $("#meter").animate({ width: '50px' }, 300);
       meter.style.backgroundColor = "red";
       document.getElementById("pass_type").innerHTML = "Very Weak";
     }
 
     if (no == 2) {
-      $("#meter").animate({
-        width: '100px'
-      }, 300);
+      $("#meter").animate({ width: '100px' }, 300);
       meter.style.backgroundColor = "#F5BCA9";
       document.getElementById("pass_type").innerHTML = "Weak";
     }
 
     if (no == 3) {
-      $("#meter").animate({
-        width: '150px'
-      }, 300);
+      $("#meter").animate({ width: '150px' }, 300);
       meter.style.backgroundColor = "#FF8000";
       document.getElementById("pass_type").innerHTML = "Good";
     }
 
     if (no == 4) {
-      $("#meter").animate({
-        width: '200px'
-      }, 300);
+      $("#meter").animate({ width: '200px' }, 300);
       meter.style.backgroundColor = "#00FF40";
       document.getElementById("pass_type").innerHTML = "Strong";
     }
@@ -343,5 +265,4 @@ function check_pass() {
 </script>
 
 </body>
-
 </html>

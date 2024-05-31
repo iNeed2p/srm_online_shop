@@ -43,7 +43,7 @@
       <tr>
 
         <td>
-          Bank Name: BDO <br>
+          Bank Name: Western Union <br>
           Account No: 1234567890<br>
           Branch Code: 001<br>
           Branch Name: Taguig Branch
